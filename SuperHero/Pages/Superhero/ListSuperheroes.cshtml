@@ -1,0 +1,32 @@
+﻿@page
+@model SuperHero.Pages.Superhero.ListSuperheroesModel
+
+
+<h2 class="display-3">List of heroes: </h2>
+
+@{
+    <ul>
+        @foreach (var item in Model.SuperheroList)
+        {
+            <li>
+                <h4>Hero: @item.Name</h4>
+            </li>
+            <li>
+                <p>Alias: @item.Alias</p>
+            </li>
+            <li>
+                <p>Type: @item.TypeOfHero</p>
+            </li>
+            <li>
+                <p>Age: @item.Age</p>
+            </li>
+            <li>
+                <p>Weight: @item.Weight</p>
+            </li>
+            <li>
+                <small>Id: @item.Id</small>
+            </li>
+        }
+    </ul>
+}
+Go to:<a class="nav-link text-black-50" asp-area="" asp-page="/Superhero/AddSuperhero"> add Superhero</a>

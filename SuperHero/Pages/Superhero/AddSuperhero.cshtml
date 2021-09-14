@@ -1,0 +1,23 @@
+﻿@page
+@model SuperHero.Pages.Superhero.AddSuperheroModel
+
+<p>Här blir det ett formulär</p>
+
+<form method="post">
+    <label for="name">Name: </label>
+    <input id="name" type="text" asp-for="@Model.Superhero.Name"/>
+    <label for="id">Id: </label>
+    <input id="id" type="number" asp-for="@Model.Superhero.Id"/>
+    <label for="age">Age: </label>
+    <input id="age" type="number" asp-for="@Model.Superhero.Age"/>
+    <label for="weight">Weight: </label>
+    <input id="weight" type="number" asp-for="@Model.Superhero.Weight"/>
+    <label for="typeOfHero">Type of hero: </label>
+    <input id="typeOfHero" type="text" asp-for="@Model.Superhero.TypeOfHero"/>
+
+</form>
+
+
+
+<a class="nav-link text-black-50" asp-area="" asp-page="/Superhero/ListSuperheroes">Go to: list of heroes</a>
+
