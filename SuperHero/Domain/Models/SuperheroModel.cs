@@ -30,6 +30,6 @@ namespace SuperHero.Domain.Models
 
         [BindProperty(SupportsGet = true)]
         [Required]
-        public TypeOfHeroEnum TypeOfHero { get; set; }
+        public string TypeOfHero { get; set; }
     }
 }

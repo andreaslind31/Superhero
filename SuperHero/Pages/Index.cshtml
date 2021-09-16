@@ -3,15 +3,28 @@
 
 
 <div class="text-center">
-    @if (Model.Superhero.Name == null)
-    {
-        <h1 class="display-4">Welcome unnamed hero!</h1>
+    @{
+        if (@Model.SuperheroName != null)
+        {
+            <h1 class="display-4">Welcome @Model.SuperheroName!</h1>
+        }
+        else
+        {
+            <h1 class="display-4">Welcome unnamed hero!</h1>
+        }
     }
-    else
-    {
-        <h1 class="display-4">Welcome @Model.Superhero.Name!</h1>
-    }
+
 
 </div>
 
-<a class="nav-link text-black-50" asp-area="" asp-page="/Superhero/AddSuperhero">Add Superhero here</a>
+<h4 class="display-4 text-black-50">Here are your stats of your own superhero: </h4>
+<ul>
+    <li>Alias: @Model.SuperheroAlias</li>
+    <li>Age: @Model.SuperheroAge</li>
+    <li>Weight: @Model.SuperheroWeight</li>
+    <li>Type: @Model.SuperheroType</li>
+    <li>Id: @Model.SuperheroId</li>
+</ul>
+
+<p>Are you satisfied? If not go again!</p>
+<a class="nav-link text-black-50" asp-area="" asp-page="/Superhero/AddSuperhero">Add new superhero here</a>

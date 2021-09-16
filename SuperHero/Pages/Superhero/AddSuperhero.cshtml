@@ -1,19 +1,34 @@
 ﻿@page
 @model SuperHero.Pages.Superhero.AddSuperheroModel
 
-<p>Här blir det ett formulär</p>
+<p>Create your own superhero!</p>
 
 <form method="post">
-    <label for="name">Name: </label>
-    <input id="name" type="text" asp-for="@Model.Superhero.Name"/>
-    <label for="id">Id: </label>
-    <input id="id" type="number" asp-for="@Model.Superhero.Id"/>
-    <label for="age">Age: </label>
-    <input id="age" type="number" asp-for="@Model.Superhero.Age"/>
-    <label for="weight">Weight: </label>
-    <input id="weight" type="number" asp-for="@Model.Superhero.Weight"/>
-    <label for="typeOfHero">Type of hero: </label>
-    <input id="typeOfHero" type="text" asp-for="@Model.Superhero.TypeOfHero"/>
+    <div class="form-group">
+        <label for="name">Name: </label>
+        <input id="name" class="form-control" placeholder="Name of your superhero here.." type="text" asp-for="@Model.Superhero.Name" />
+    </div>
+    <div class="form-group">
+        <label for="alias">Alias: </label>
+        <input id="alias" class="form-control" placeholder="Alias?" type="text" asp-for="@Model.Superhero.Alias" />
+    </div>
+    <div class="form-group">
+        <label for="id">Id: </label>
+        <input id="id" class="form-control" placeholder="Put a number on your hero!" type="number" asp-for="@Model.Superhero.Id" />
+    </div>
+    <div class="form-group">
+        <label for="age">Age: </label>
+        <input id="age" class="form-control" placeholder="What is the age of the hero?" type="number" asp-for="@Model.Superhero.Age" />
+    </div>
+    <div class="form-group">
+        <label for="weight">Weight: </label>
+        <input id="weight" class="form-control" placeholder="The weight" type="number" asp-for="@Model.Superhero.Weight" />
+    </div>
+    <div class="form-group">
+        <label for="typeOfHero">Type of hero: </label>
+        <input id="typeOfHero" class="form-control" placeholder="Type of hero. E.g strong & mutated from spider" type="text" asp-for="@Model.Superhero.TypeOfHero" />
+    </div>
+    <button type="submit" class="btn btn-success">Submit superhero</button>
 
 </form>
 

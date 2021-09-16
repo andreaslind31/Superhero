@@ -2,31 +2,29 @@
 @model SuperHero.Pages.Superhero.ListSuperheroesModel
 
 
-<h2 class="display-3">List of heroes: </h2>
+<h2 class="display-2">List of heroes </h2>
 
-@{
-    <ul>
-        @foreach (var item in Model.SuperheroList)
+<div class="row">
+    @{ foreach (var item in Data.DataStorage.listOfHeroes)
         {
-            <li>
-                <h4>Hero: @item.Name</h4>
-            </li>
-            <li>
-                <p>Alias: @item.Alias</p>
-            </li>
-            <li>
-                <p>Type: @item.TypeOfHero</p>
-            </li>
-            <li>
-                <p>Age: @item.Age</p>
-            </li>
-            <li>
-                <p>Weight: @item.Weight</p>
-            </li>
-            <li>
-                <small>Id: @item.Id</small>
-            </li>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">@item.Name</h3>
+                        <p class="card-text">Alias: @item.Alias</p>
+                        <p class="card-text">Type: @item.TypeOfHero</p>
+                        <p class="card-text">Age: @item.Age</p>
+                        <p class="card-text">Weight: @item.Weight</p>
+                        <a class="card-link " asp-page="/Superhero/EditSuperhero" asp-route-id="@item.Id">Edit hero</a>
+                        <small class="card-subtitle">Id: @item.Id</small>
+                    </div>
+                </div>
+            </div>
         }
-    </ul>
-}
-Go to:<a class="nav-link text-black-50" asp-area="" asp-page="/Superhero/AddSuperhero"> add Superhero</a>
+    }
+</div>
+<p class="text-black-50">
+    Go to:<a class="nav-link text-black-50" asp-area="" asp-page="/Superhero/AddSuperhero">
+        add Superhero
+    </a>
+</p>

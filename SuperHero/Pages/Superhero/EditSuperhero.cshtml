@@ -1,0 +1,24 @@
+﻿@page
+@model SuperHero.Pages.Superhero.EditSuperheroModel
+
+
+
+<p>Edit your favorite hero!</p>
+@{
+    foreach (var item in Data.DataStorage.listOfHeroes)
+    {
+        if (item.Id == Model.Id)
+        {
+
+            <p>Name @item.Name</p>
+            <p>Age @item.Age</p>
+            <p>Weight @item.Weight</p>
+            <p>Alias @item.Alias</p>
+            <p>Id @item.Id</p>
+            <p>Type @item.TypeOfHero</p>
+        }
+    }
+}
+
+
+@*<p class="text-black-50">Alias: @Model.SuperheroAlias</p>*@

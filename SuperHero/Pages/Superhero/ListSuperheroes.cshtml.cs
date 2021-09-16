@@ -10,10 +10,10 @@ namespace SuperHero.Pages.Superhero
 {
     public class ListSuperheroesModel : PageModel
     {
-        public List<SuperheroModel> SuperheroList { get; set; }
+        public static List<SuperheroModel> SuperheroList { get; set; }
         public void OnGet()
         {
-            this.SuperheroList = Data.DataStorage.listOfHeroes;
+            SuperheroList = Data.DataStorage.listOfHeroes;
             
         }
     }

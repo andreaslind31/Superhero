@@ -8,14 +8,15 @@ using SuperHero.Domain.Models;
 
 namespace SuperHero.Pages.Superhero
 {
-    public class AddSuperheroModel : PageModel
+    public class EditSuperheroModel : PageModel
     {
         [BindProperty]
         public SuperheroModel Superhero { get; set; } = new SuperheroModel();
 
-        public void OnGet()
+        public int Id { get; set; }
+        public void OnGet(int id)
         {
-
+            Id = id;
         }
         public IActionResult OnPost()
         {
@@ -24,11 +25,12 @@ namespace SuperHero.Pages.Superhero
                 return Page();
             }
 
-
-            Data.DataStorage.listOfHeroes.Add(Superhero);
+            //sök genom LINQ för att hitta den specifika superheroen i listan
+            //Data.DataStorage.listOfHeroes.Add(Superhero);
 
             return RedirectToPage("/Index",
-                new {
+                new
+                {
                     SuperheroName = Superhero.Name,
                     SuperheroId = Superhero.Id,
                     SuperheroAge = Superhero.Age,

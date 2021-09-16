@@ -12,7 +12,22 @@ namespace SuperHero.Pages
     public class IndexModel : PageModel
     {
         [BindProperty(SupportsGet = true)]
-        public SuperheroModel Superhero { get; set; }
+        public string SuperheroName { get; set; }
+
+        [BindProperty(SupportsGet = true)]
+        public string SuperheroAlias { get; set; }
+
+        [BindProperty(SupportsGet = true)]
+        public int SuperheroId { get; set; }
+
+        [BindProperty(SupportsGet = true)]
+        public int SuperheroAge { get; set; }
+
+        [BindProperty(SupportsGet = true)]
+        public int SuperheroWeight { get; set; }
+
+        [BindProperty(SupportsGet = true)]
+        public string SuperheroType { get; set; }
 
         public void OnGet()
         {
