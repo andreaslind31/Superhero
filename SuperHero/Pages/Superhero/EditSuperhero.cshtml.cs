@@ -13,10 +13,10 @@ namespace SuperHero.Pages.Superhero
         [BindProperty]
         public SuperheroModel Superhero { get; set; } = new SuperheroModel();
 
-        public int Id { get; set; }
-        public void OnGet(int id)
+        public string Name { get; set; }
+        public void OnGet(string name)
         {
-            Id = id;
+            Name = name;
         }
         public IActionResult OnPost()
         {
@@ -32,7 +32,6 @@ namespace SuperHero.Pages.Superhero
                 new
                 {
                     SuperheroName = Superhero.Name,
-                    SuperheroId = Superhero.Id,
                     SuperheroAge = Superhero.Age,
                     SuperheroType = Superhero.TypeOfHero,
                     SuperheroWeight = Superhero.Weight,

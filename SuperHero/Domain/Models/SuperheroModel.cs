@@ -18,10 +18,6 @@ namespace SuperHero.Domain.Models
 
         [BindProperty(SupportsGet = true)]
         [Required]
-        public int Id { get; set; }
-
-        [BindProperty(SupportsGet = true)]
-        [Required]
         public int Age { get; set; }
 
         [BindProperty(SupportsGet = true)]

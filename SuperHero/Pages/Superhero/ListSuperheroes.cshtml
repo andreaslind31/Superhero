@@ -5,7 +5,7 @@
 <h2 class="display-2">List of heroes </h2>
 
 <div class="row">
-    @{ foreach (var item in Data.DataStorage.listOfHeroes)
+    @{ foreach (var item in Data.DataStorage.ListOfHeroes)
         {
             <div class="col-sm-4">
                 <div class="card">
@@ -15,16 +15,15 @@
                         <p class="card-text">Type: @item.TypeOfHero</p>
                         <p class="card-text">Age: @item.Age</p>
                         <p class="card-text">Weight: @item.Weight</p>
-                        <a class="card-link " asp-page="/Superhero/EditSuperhero" asp-route-id="@item.Id">Edit hero</a>
-                        <small class="card-subtitle">Id: @item.Id</small>
+                        <a class="card-link " asp-page="/Superhero/EditSuperhero" asp-route-id="@item.Name">Edit hero</a>
                     </div>
                 </div>
             </div>
         }
     }
 </div>
-<p class="text-black-50">
-    Go to:<a class="nav-link text-black-50" asp-area="" asp-page="/Superhero/AddSuperhero">
-        add Superhero
-    </a>
-</p>
+
+<a class="btn btn-outline-success" asp-area="" asp-page="/Superhero/AddSuperhero">
+    Add new superhero
+</a>
+

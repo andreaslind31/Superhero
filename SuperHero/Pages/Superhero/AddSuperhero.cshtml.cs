@@ -25,12 +25,11 @@ namespace SuperHero.Pages.Superhero
             }
 
 
-            Data.DataStorage.listOfHeroes.Add(Superhero);
+            Data.DataStorage.ListOfHeroes.Add(Superhero);
 
             return RedirectToPage("/Index",
                 new {
                     SuperheroName = Superhero.Name,
-                    SuperheroId = Superhero.Id,
                     SuperheroAge = Superhero.Age,
                     SuperheroType = Superhero.TypeOfHero,
                     SuperheroWeight = Superhero.Weight,

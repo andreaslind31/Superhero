@@ -5,16 +5,15 @@
 
 <p>Edit your favorite hero!</p>
 @{
-    foreach (var item in Data.DataStorage.listOfHeroes)
+    foreach (var item in DummyData.DataStorage.ListOfHeroes)
     {
-        if (item.Id == Model.Id)
+        if (item.Name == Model.Name)
         {
 
             <p>Name @item.Name</p>
             <p>Age @item.Age</p>
             <p>Weight @item.Weight</p>
             <p>Alias @item.Alias</p>
-            <p>Id @item.Id</p>
             <p>Type @item.TypeOfHero</p>
         }
     }

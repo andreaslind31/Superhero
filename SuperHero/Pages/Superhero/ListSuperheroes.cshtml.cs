@@ -13,7 +13,7 @@ namespace SuperHero.Pages.Superhero
         public static List<SuperheroModel> SuperheroList { get; set; }
         public void OnGet()
         {
-            SuperheroList = Data.DataStorage.listOfHeroes;
+            SuperheroList = Data.DataStorage.ListOfHeroes;
             
         }
     }

@@ -17,14 +17,21 @@
 
 </div>
 
-<h4 class="display-4 text-black-50">Here are your stats of your own superhero: </h4>
-<ul>
-    <li>Alias: @Model.SuperheroAlias</li>
-    <li>Age: @Model.SuperheroAge</li>
-    <li>Weight: @Model.SuperheroWeight</li>
-    <li>Type: @Model.SuperheroType</li>
-    <li>Id: @Model.SuperheroId</li>
-</ul>
+@if (Model.SuperheroName != null)
+{
+    <h4 class="display-4 text-black-50">Here are your stats of your own superhero: </h4>
+    <ul>
+        <li>Alias: @Model.SuperheroAlias</li>
+        <li>Age: @Model.SuperheroAge</li>
+        <li>Weight: @Model.SuperheroWeight</li>
+        <li>Type: @Model.SuperheroType</li>
+    </ul>
+}
+else
+{
+    <h4 class="display-4 text-black-50">Create your hero to see the stats </h4>
+}
+
 
 <p>Are you satisfied? If not go again!</p>
 <a class="nav-link text-black-50" asp-area="" asp-page="/Superhero/AddSuperhero">Add new superhero here</a>
